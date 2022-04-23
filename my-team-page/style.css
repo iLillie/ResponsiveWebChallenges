@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+:root {
+    --columns: 3;
+    --fs-small: clamp(0.65rem, 3vw, 1rem);
+    --fs-medium: clamp(0.9rem, 3vw, 1.15rem)
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+    min-height: 100vh;
+}
+
+header {
+    padding: 5rem 1rem;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-medium);
+}
+
+footer {
+    margin-top: 10rem;
+    color: #A9A9A9;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.portrait {
+    margin-top: 5rem;
+    max-width: 17rem;
+    font-family: 'PT Serif', serif;
+}
+
+.portrait p {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+}
+
+.portrait img {
+    width: 80%;
+    margin: 0 0.5rem 0.5rem 0;
+}
+
+.portrait div {
+    display: flex;
+}
+
+.portrait div > * {
+    flex-basis: min-content;
+}
+
+.columns-flow {
+    grid-template-columns: repeat(var(--columns), 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
+
+.split {
+    grid-template-columns: repeat(calc(var(--columns) - 1), 1fr);
+}
+
+/* Utilities */
+
+.grid {
+    display: grid;
+}
+
+.text-medium {
+    font-size: var(--fs-medium);
+}
+
+.wrapper {
+    max-width: min(100% - 2rem, 70rem);
+    margin-inline: auto;
+    min-height: 100vh;
+}
+
+/* Media Queries */
+
+/* Desktop */
+
+@media only screen and (min-width: 60.01rem) {
+    .portrait:nth-of-type(3n + 2) {
+        margin-top: 10rem;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 60rem) {
+    :root {
+        --columns: 2;
+    }
+
+    .portrait:nth-of-type(even) {
+        margin-top: 10rem;
+    }
+}
