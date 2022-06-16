@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Custom Properties */
+:root
+{
+    --bg-color: #181719;
+    --primary-text: white;
+    --text-gray: #828282;
+    --ff-1: 'Crimson Pro', serif;
+    --ff-2: 'Lora', serif;
+    --ff-3: 'Montserrat', sans-serif;
+
+    --fs-1: clamp(0.625rem, 3vw, 0.75rem); /* 10px to 12px */
+    --fs-2: clamp(0.75rem, 3vw, 0.875rem); /* 12px to 14px */
+    --fs-3: clamp(0.875rem, 3vw, 1.5rem); /* 14px to 24px */
+    --fs-4: clamp(2rem, 5vw, 3rem);
+}
+
+/* Element styling */
+
+html {
+    background-color: var(--bg-color);
+    max-width: 1440px;
+    margin-inline: auto;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    padding-inline: 16px;
+    grid-template-rows: min-content auto;
+}
+
+h1, h2, p {
+    color: var(--primary-text);
+}
+
+p {
+    font-family: var(--ff-3);
+    font-size: 0.875rem;
+}
+
+button {
+    background: transparent;
+    color: var(--primary-text);
+    border: none;
+}
+
+
+/* Layout */
+.wrapper-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+
+
+/* Header */
+
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    height: min-content;
+}
+
+/* Main */
+
+.main {
+    display: grid;
+    justify-content: center;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+/* introduction */
+
+.introduction {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+.introduction > p {
+    font-size: var(--fs-3);
+    max-width: 30ch;
+}
+
+.introduction > h1 {
+    font-family: var(--ff-2);
+    font-size: var(--fs-4);
+    font-weight: 700;
+}
+
+.introduction > button
+{
+    font-family: var(--ff-3);
+    font-weight: bold;
+    display: flex;
+    gap: 6px;
+}
+
+/* Navigation */
+
+
+nav > button {
+    position: relative;
+    z-index: 30;
+}
+
+.nav-items {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    gap: 1rem;
+    z-index: 20;
+    inset: 0;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items > ul {
+    margin: 0;
+}
+
+.nav-items > li > a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-family: var(--ff-3);
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding-block: 0.4em;
+}
+
+.active-link {
+    border-bottom: 2px solid white;
+}
+
+.nav-d-hidden {
+    display: none;
+}
+
+.menu-open {
+    display: flex;
+}
+
+.menu-closed-bg {
+    display: none;
+}
+
+.nav-bg {
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-color);
+    inset: 0;
+    z-index: 10;
+}
+
+/* Aside content */
+
+.aside {
+    height: min-content;
+    position: relative;
+}
+
+.card
+{
+    bottom: -60px;
+    right: 20px;
+    position: absolute;
+    display: grid;
+    padding: 16px;
+    background-color: var(--bg-color);
+    gap: 0.5rem;
+    width: clamp(18.75rem, 30vw, 25.625rem);
+    font-family: var(--ff-3);
+    font-weight: 500;
+}
+
+.card > h2
+{
+    font-family: var(--ff-2);
+    font-size: 1.25rem;
+    max-width: 18ch;
+    line-height: 1.3;
+
+}
+
+.card > div {
+    gap: 1rem;
+}
+
+.profile-title {
+    color: var(--text-gray);
+}
+
+.profile-image {
+    height: clamp(36px, 3vw, 50px);
+    border-radius: 32px;
+}
+
+/* Media Query */
+@media only screen and (min-width: 55rem) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .nav-d-hidden {
+        display: flex;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        position: initial;
+    }
+
+    .nav-m-hidden {
+        display: none;
+    }
+
+    .nav-bg {
+        display: none;
+    }
+
+}
+
+/* Utility classes */
+
+.items-center
+{
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 0.5rem);
+}
+
+.grid {
+    display: grid;
+}
+
+.p-2 {
+    padding: 16px;
+}
