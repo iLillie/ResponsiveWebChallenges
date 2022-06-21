@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.wrapper {
+    max-width: min(100% - 32px, 61.25rem);
+    margin-inline: auto;
+}
+
+:root {
+    --ff-1: 'Montserrat', sans-serif;
+    --gray-1: #4E5150;
+    --gray-2: #f3f3f3;
+    --gray-3: #A9A9A9;
+    --gray-4: #7c7c7c;
+}
+
+/* Elements */
+
+header {
+    text-align: center;
+    margin-block: 2rem;
+}
+
+img:not(.profile-picture) {
+    border-radius: clamp(5px, 2vw, 12px);
+    object-fit: cover;
+}
+
+main {
+    margin-block: clamp(2rem, 3vw, 3rem);
+}
+
+h1, p {
+    font-family: var(--ff-1);
+    color: var(--gray-1);
+}
+
+/* Header */
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 32px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--gray-2);
+    width: 6.25rem;
+    aspect-ratio: 100/67;
+    border-radius: 12px;
+}
+
+.card_text {
+    font-size: clamp(0.75rem, 2vw,  1.125rem);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.card_title {
+    color: var(--gray-4);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    line-height: 1.1;
+}
+
+.profile-picture {
+    max-width: clamp(6.25rem, 20vw, 9.75rem);
+    margin-inline: auto;
+    border-radius: 16px;
+}
+
+/* Image grid layout */
+
+.image-layout {
+    display: grid;
+    grid-template-areas:
+    "one two two"
+    "three three four"
+    "five six four";
+
+    gap: clamp(11px, 3vw, 36px);
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+    min-width: 100%;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.five, .six {
+    aspect-ratio: 1/1;
+}
