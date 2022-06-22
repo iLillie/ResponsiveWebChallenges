@@ -19,19 +19,19 @@ This makes the experience smoother for people on desktop having to resize their 
 
 ## Recipe page
 [Demo](https://ilillie.github.io/dev-challenges-responsive/recipe-page/)
-![](assets/Recipe page.png)
+![](assets/Recipepage.png)
 
 ## Interior Consultant
 [Demo](https://ilillie.github.io/dev-challenges-responsive/interior-consultant/)
-![](assets/Modern Interior.png)
+![](assets/ModernInterior.png)
 
 ## My Gallery
 [Demo](https://ilillie.github.io/dev-challenges-responsive/my-gallery/)
-![](assets/My gallery.png)
+![](assets/Mygallery.png)
 
 ## My Team page
 [Demo](https://ilillie.github.io/dev-challenges-responsive/my-team-page/)
-![](assets/My Team Page.png)
+![](assets/MyTeamPage.png)
 
 ## 404 Not Found
 [Demo](https://ilillie.github.io/dev-challenges-responsive/404-not-found/)
