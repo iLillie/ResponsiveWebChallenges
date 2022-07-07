@@ -18,21 +18,21 @@ This makes the experience smoother for people on desktop having to resize their 
 
 
 ## Recipe page
-[Demo](https://ilillie.github.io/dev-challenges-responsive/recipe-page/)
+[Demo](https://ilillie.github.io/ResponsiveWebChallenges/recipe-page/)
 ![](assets/Recipepage.png)
 
 ## Interior Consultant
-[Demo](https://ilillie.github.io/dev-challenges-responsive/interior-consultant/)
+[Demo](https://ilillie.github.io/ResponsiveWebChallenges/interior-consultant/)
 ![](assets/ModernInterior.png)
 
 ## My Gallery
-[Demo](https://ilillie.github.io/dev-challenges-responsive/my-gallery/)
+[Demo](https://ilillie.github.io/ResponsiveWebChallenges/my-gallery/)
 ![](assets/Mygallery.png)
 
 ## My Team page
-[Demo](https://ilillie.github.io/dev-challenges-responsive/my-team-page/)
+[Demo](https://ilillie.github.io/ResponsiveWebChallenges/my-team-page/)
 ![](assets/MyTeamPage.png)
 
 ## 404 Not Found
-[Demo](https://ilillie.github.io/dev-challenges-responsive/404-not-found/)
+[Demo](https://ilillie.github.io/ResponsiveWebChallenges/404-not-found/)
 ![](assets/404NotFound.png)
