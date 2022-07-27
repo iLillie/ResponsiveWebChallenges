@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <title>Checkout page</title>
+</head>
+<body>
+<header>
+  <h1>Checkout</h1>
+</header>
+<main>
+  <section>
+    <article >
+      <img src="photo1.png" alt="Dark green vintage backbag">
+      <div class="info">
+        <h3>Vintage Backbag</h3>
+        <div>
+          <p>$54.99</p>
+          <p>$94.99</p>
+        </div>
+        <div>
+          <button>-</button>
+          <p>1</p>
+          <button>+</button>
+        </div>
+      </div>
+    </article>
+    <article>
+      <img src="photo2.png" alt="Dark blue levi shoes">
+      <h3>Levi Shoes</h3>
+      <p>$74.99</p>
+      <p>$124.99</p>
+      <div>
+        <button>-</button>
+        <p>1</p>
+        <button>+</button>
+      </div>
+    </article>
+    <table>
+      <tr>
+        <td>Shipping</td>
+        <td>$19</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td>$148.98</td>
+      </tr>
+    </table>
+  </section>
+  <form action="">
+    <fieldset>
+      <legend>Contact information</legend>
+      <div>
+        <!-- Screen readers doesn't read out legend -->
+        <!-- More info here: https://www.w3.org/WAI/tutorials/forms/grouping/ -->
+        <label for="email-input">
+          <span class="visually-hidden">Contact</span> E-mail
+        </label>
+        <div>
+          <!-- Icon here -->
+          <span></span>
+          <input type="email" name="" id="email-input">
+        </div>
+      </div>
+      <div>
+        <label for="phone-input">
+          Phone
+        </label>
+        <div>
+          <!-- Icon here -->
+          <span></span>
+          <input type=text name="" id="phone-input">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Shipping address</legend>
+      <div>
+        <label for="name-input">
+          <span class="visually-hidden">Shipping address</span> Full name
+        </label>
+        <div>
+          <!-- Icon here -->
+          <span></span>
+          <input type="text" name="" id="name-input">
+        </div>
+      </div>
+      <div>
+        <label for="address-input">
+          Address
+        </label>
+        <div>
+          <!-- Icon here -->
+          <span></span>
+          <input type=text name="" id="address-input">
+        </div>
+      </div>
+      <div>
+        <label for="city-input">
+          City
+        </label>
+        <div>
+          <!-- Icon here -->
+          <span></span>
+          <input type=text name="" id="city-input">
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <label for="country-dropdown">
+            Country
+          </label>
+          <div>
+            <!-- Icon here -->
+            <span></span>
+            <select name="" id="country-dropdown"></select>
+          </div>
+        </div>
+        <div>
+          <label for="postal-input">
+            Postal code
+          </label>
+          <div>
+            <!-- Icon here -->
+            <span></span>
+            <input type=text name="" id="postal-input">
+          </div>
+        </div>
+      </div>
+
+    </fieldset>
+    <div>
+      <input type="checkbox" name="" id="save-information">
+      <label for="save-information">
+        Save this information for next time
+      </label>
+    </div>
+    <button>Continue</button>
+  </form>
+</main>
+</body>
+</html>
