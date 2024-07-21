@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
     font-family: 'Poppins';
 }
@@ -12,13 +11,17 @@
     --font-big: 3.75rem;
 }
 
+p {
+    color: #909193;
+}
+
 body {
     background-color: #F2F9FE;
     font-size: var(--font-body);
 }
 
 main {
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -28,7 +31,7 @@ nav > ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 
@@ -51,7 +54,7 @@ nav > ul {
 header {
     display: flex;
     justify-content: space-between;
-    padding-block: 1rem;
+    padding-block: 1.75rem;
     align-items: center;
 }
 
@@ -92,7 +95,6 @@ header {
 
 .intro {
     display: grid;
-    gap: 1.5rem
 }
 
 .hero_image {
@@ -141,5 +143,22 @@ button:hover {
 
 .uppercase {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
+    color: #111729;
+}
+
+.margin-small {
+    margin-bottom: 0.75rem;
+}
+
+.margin-medium {
+    margin-bottom: 1.25rem;
+}
+
+.margin-large {
+    margin-bottom: 2rem;
+}
+
+.margin-xl {
+    margin-bottom: 2.5rem;
 }
