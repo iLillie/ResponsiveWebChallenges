@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: 'Poppins';
+}
+
+:root {
+    --font-small: 0.875rem;
+    --font-button: 1rem;
+    --font-body: 1.125rem;
+    --font-big: 3.75rem;
+}
+
+body {
+    background-color: #F2F9FE;
+    font-size: var(--font-body);
+}
+
+main {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+
+.link {
+    text-decoration: none;
+    color: #909193;
+    font-weight: 500;
+}
+
+.selected-link {
+    color: #111729;
+}
+
+.main-link {
+    color: #2A4DD0;
+    text-decoration:underline;
+    text-underline-offset: 4px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+    align-items: center;
+}
+
+
+.hero {
+    grid-area: 1/2;
+}
+
+@media only screen and (max-width: 64rem) {
+
+    main {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .hero {
+        grid-area: 1;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+
+    .hero_image {
+        max-width: 80%;
+    }
+
+    .intro {
+        padding-block: 5rem
+    }
+}
+
+.container {
+    max-width: 80rem;
+    margin-inline: auto;
+    min-height: 100vh;
+    padding-inline: 2rem;
+}
+
+
+.intro {
+    display: grid;
+    gap: 1.5rem
+}
+
+.hero_image {
+    width: 100%
+}
+
+.primary-button {
+    border: none;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: #2A4DD0;
+    color: #FFF;
+}
+
+/* Helper classes? */
+
+.large-text {
+    font-size: var(--font-big);
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.gap {
+    gap: 1rem
+}
+
+.gap-small {
+    gap: 0.5rem
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.big-text {
+    width: 10ch;
+    font-weight: 800;
+    color: #111729;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: 500;
+}
